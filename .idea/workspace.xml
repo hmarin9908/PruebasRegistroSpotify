@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c34b9ac9-3d1e-490c-8e9b-d11a3999b44c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/HolaMundoSelenium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/MasMetodosSelenium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/MetodosNavegacionSelenium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/EsperasSelenium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePrueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ejemploSelenium/MasMetodosSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/ElementosWebSelenium.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,54 +47,108 @@
       <recent name="C:\Users\humberto.marin\SeleniumPrimerosPasos\src\test\resources\drivers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
       <recent name="ejemploSelenium" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MasMetodosSelenium">
-    <configuration name="HolaMundoSelenium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ejemploSelenium.HolaMundoSelenium" />
+  <component name="RunManager" selected="TestNG.CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido">
+    <configuration name="CasosDePrueba.CP002_Registro_Fallido_Contraseña_corta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPrimerosPasos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejemploSelenium.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP002_Registro_Fallido_Contraseña_corta" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MasMetodosSelenium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ejemploSelenium.MasMetodosSelenium" />
+    <configuration name="CasosDePrueba.CP003_Registro_Fallido_Año_inválido" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPrimerosPasos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejemploSelenium.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP003_Registro_Fallido_Año_inválido" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MetodosNavegacionSelenium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ejemploSelenium.MetodosNavegacionSelenium" />
+    <configuration name="CasosDePrueba.CP004_Registro_Fallido_Nombre_Perfil_Faltante" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPrimerosPasos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejemploSelenium.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP004_Registro_Fallido_Nombre_Perfil_Faltante" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePrueba.CP005_Registro_Fallido_Dia_del_Mes_Inválido" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPrimerosPasos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP005_Registro_Fallido_Dia_del_Mes_Inválido" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPrimerosPasos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP006_Registro_Fallido_Mes_Inválido" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MasMetodosSelenium" />
-        <item itemvalue="Application.MetodosNavegacionSelenium" />
-        <item itemvalue="Application.HolaMundoSelenium" />
+        <item itemvalue="TestNG.CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido" />
+        <item itemvalue="TestNG.CasosDePrueba.CP005_Registro_Fallido_Dia_del_Mes_Inválido" />
+        <item itemvalue="TestNG.CasosDePrueba.CP004_Registro_Fallido_Nombre_Perfil_Faltante" />
+        <item itemvalue="TestNG.CasosDePrueba.CP003_Registro_Fallido_Año_inválido" />
+        <item itemvalue="TestNG.CasosDePrueba.CP002_Registro_Fallido_Contraseña_corta" />
       </list>
     </recent_temporary>
   </component>

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class MasMetodosSelenium {
+public class ElementosWebSelenium {
     public static void main(String[] args) throws InterruptedException {
         //Paso 1. Agregar el ChromeDriver
         //Paso 2. Enlazar el WebDriver.
@@ -65,7 +65,7 @@ public class MasMetodosSelenium {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.name("password")).sendKeys("Abc123.");
+        driver.findElement(By.name("password")).sendKeys("Abc123.999999asdA");
 
         Thread.sleep(2000);
 
@@ -88,7 +88,26 @@ public class MasMetodosSelenium {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("label[@for=\"gender_option_male\"]")).click();
+        driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//label[@for=\"marketing-opt-checkbox\"]")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//label[@for=\"third-party-checkbox\"]")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//button[@type=\"submit\"]")).submit();
+        Thread.sleep(2000);
+
+        String resultadoEsperado = "Confirma que no eres un robot.";
+        String resultadoActual = driver.findElement(By.xpath("//div[contains(text(),\"Confirma que no eres un robot.\")]")).getText();
+
+        if(resultadoActual.equals(resultadoEsperado)){
+            System.out.println("Caso OK se verifica ausencia de CAPTCHA");
+        }else {
+            System.out.println("Buuuuu");
+        }
 
 
         //Paso 6. Cerrar el browser
