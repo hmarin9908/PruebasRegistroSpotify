@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c34b9ac9-3d1e-490c-8e9b-d11a3999b44c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/EsperasSelenium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePrueba.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ejemploSelenium/MasMetodosSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ejemploSelenium/ElementosWebSelenium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePrueba.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +48,43 @@
       <recent name="ejemploSelenium" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido">
+  <component name="RunManager" selected="TestNG.CasosDePrueba.CP006_Registro_Fallido_Sin_Seleccion_Sexo">
+    <configuration name="CasosDePrueba.CP001_Buscar_Artista" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPrimerosPasos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP001_Buscar_Artista" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePrueba.CP001_Buscar_Cancion" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumPrimerosPasos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP001_Buscar_Cancion" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CasosDePrueba.CP002_Registro_Fallido_Contraseña_corta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPrimerosPasos" />
       <extension name="coverage">
@@ -63,42 +96,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
       <option name="METHOD_NAME" value="CP002_Registro_Fallido_Contraseña_corta" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CasosDePrueba.CP003_Registro_Fallido_Año_inválido" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumPrimerosPasos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
-      <option name="METHOD_NAME" value="CP003_Registro_Fallido_Año_inválido" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CasosDePrueba.CP004_Registro_Fallido_Nombre_Perfil_Faltante" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumPrimerosPasos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
-      <option name="METHOD_NAME" value="CP004_Registro_Fallido_Nombre_Perfil_Faltante" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -124,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePrueba.CP006_Registro_Fallido_Sin_Seleccion_Sexo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPrimerosPasos" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
-      <option name="METHOD_NAME" value="CP006_Registro_Fallido_Mes_Inválido" />
+      <option name="METHOD_NAME" value="CP006_Registro_Fallido_Sin_Seleccion_Sexo" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -144,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasosDePrueba.CP006_Registro_Fallido_Mes_Inválido" />
+        <item itemvalue="TestNG.CasosDePrueba.CP006_Registro_Fallido_Sin_Seleccion_Sexo" />
         <item itemvalue="TestNG.CasosDePrueba.CP005_Registro_Fallido_Dia_del_Mes_Inválido" />
-        <item itemvalue="TestNG.CasosDePrueba.CP004_Registro_Fallido_Nombre_Perfil_Faltante" />
-        <item itemvalue="TestNG.CasosDePrueba.CP003_Registro_Fallido_Año_inválido" />
         <item itemvalue="TestNG.CasosDePrueba.CP002_Registro_Fallido_Contraseña_corta" />
+        <item itemvalue="TestNG.CasosDePrueba.CP001_Buscar_Artista" />
+        <item itemvalue="TestNG.CasosDePrueba.CP001_Buscar_Cancion" />
       </list>
     </recent_temporary>
   </component>

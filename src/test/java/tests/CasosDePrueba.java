@@ -21,7 +21,7 @@ public class CasosDePrueba {
     @AfterTest
     public void posCondicion(){
         driver.close();
-    }
+}
 
     @BeforeTest
     public void preCondiciones(){
@@ -35,71 +35,51 @@ public class CasosDePrueba {
         driver.navigate().to("https://open.spotify.com/");
         driver.manage().window().maximize();
     }
-
     @Test
-    public void CP001_Registro_Fallido_Captcha_en_blanco() {
+    public void CP001_Buscar_Artista() throws InterruptedException {
+    By clickBtnBuscar = By.xpath("//ul/li[2]/a");
+    wait.until(ExpectedConditions.presenceOfElementLocated(clickBtnBuscar));
+    WebElement btnBuscar = driver.findElement(clickBtnBuscar);
+    btnBuscar.click();
+    Thread.sleep(3000);
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+    By buscarCancion = By.xpath("//input[@placeholder=\"¿Qué quieres escuchar?\"]");
+    driver.findElement(buscarCancion).sendKeys("The 1975");
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+    By iconoArtista = By.xpath("//div[contains(text(),\"The 1975\")]");
+    wait.until(ExpectedConditions.presenceOfElementLocated(iconoArtista)).click();
 
-        btnRegistrarse.click();
-
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
-
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
-
-        driver.findElement(By.name("password")).sendKeys("Abc123.999999asdA");
-
-        driver.findElement(By.id("displayname")).sendKeys("HumbertoMarin9908201t8");
-
-        driver.findElement(By.id("day")).sendKeys("20");
-
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
-        cmbMes.selectByVisibleText("Agosto");
-
-        driver.findElement(By.id("year")).sendKeys("1999");
-
-        WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
-
-        WebElement btnRegistro = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
-        js.executeScript("arguments[0].scrollIntoView();", btnRegistro);
-
-        optionMale.click();
-
-        driver.findElement(By.xpath("//label[@for=\"marketing-opt-checkbox\"]")).click();
-
-        driver.findElement(By.xpath("//label[@for=\"third-party-checkbox\"]")).click();
-
-        btnRegistro.click();
-
-        Assert.assertEquals("Confirma que no eres un robot.",
-                driver.findElement(By.xpath("//div[contains(text(),\"Confirma que no eres un robot.\")]")).getText());
+    By listaArtista = By.xpath("//h1[text()=\"The 1975\"]");
+    Assert.assertEquals("The 1975",
+            wait.until(ExpectedConditions.presenceOfElementLocated(listaArtista)).getText());
 
     }
     @Test
-    public void CP002_Registro_Fallido_Contraseña_corta() {
+    public void CP002_Registro_Fallido_Contraseña_corta(){
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+        driver.findElement(By.xpath("//button[contains(text(),\"Regístrate\")]")).click();
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+        By BtnEmail = By.xpath("//input[@id=\"email\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(BtnEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        btnRegistrarse.click();
+        By confirmarEmail = By.xpath("//input[@id=\"confirm\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(confirmarEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
 
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
+        By crearContraseña = By.xpath("//input[@placeholder=\"Crea una contraseña.\"]");
+            driver.findElement(crearContraseña).sendKeys("Abc123");
 
-        driver.findElement(By.name("password")).sendKeys("Abc123");
 
-        driver.findElement(By.id("displayname")).sendKeys("HumbertoMarin9908201t8");
+        By nombreUsuario = By.xpath("//input[@placeholder=\"Introduce un nombre de perfil.\"]");
+        driver.findElement(nombreUsuario).sendKeys("HMarin990820");
 
-        driver.findElement(By.id("day")).sendKeys("20");
 
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
+        driver.findElement(By.xpath("//input[@placeholder=\"DD\"]")).sendKeys("20");
+
+        Select cmbMes = new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
         cmbMes.selectByVisibleText("Agosto");
 
-        driver.findElement(By.id("year")).sendKeys("1999");
+        driver.findElement(By.xpath("//input[@placeholder=\"AAAA\"]")).sendKeys("1999");
 
         WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
 
@@ -120,26 +100,29 @@ public class CasosDePrueba {
     @Test
     public void CP003_Registro_Fallido_Año_inválido() {
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+        driver.findElement(By.xpath("//button[contains(text(),\"Regístrate\")]")).click();
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+        By BtnEmail = By.xpath("//input[@id=\"email\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(BtnEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        btnRegistrarse.click();
+        By confirmarEmail = By.xpath("//input[@id=\"confirm\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(confirmarEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
 
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
+        By crearContraseña = By.xpath("//input[@placeholder=\"Crea una contraseña.\"]");
+        driver.findElement(crearContraseña).sendKeys("Abc123456.A");
 
-        driver.findElement(By.name("password")).sendKeys("Abc123a123.789");
 
-        driver.findElement(By.id("displayname")).sendKeys("HumbertoMarin9908201t8");
+        By nombreUsuario = By.xpath("//input[@placeholder=\"Introduce un nombre de perfil.\"]");
+        driver.findElement(nombreUsuario).sendKeys("HMarin990820");
 
-        driver.findElement(By.id("day")).sendKeys("20");
 
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
+        driver.findElement(By.xpath("//input[@placeholder=\"DD\"]")).sendKeys("20");
+
+        Select cmbMes = new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
         cmbMes.selectByVisibleText("Agosto");
 
-        driver.findElement(By.id("year")).sendKeys("199");
+        driver.findElement(By.xpath("//input[@placeholder=\"AAAA\"]")).sendKeys("199");
 
         WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
 
@@ -160,26 +143,29 @@ public class CasosDePrueba {
     @Test
     public void CP004_Registro_Fallido_Nombre_Perfil_Faltante() {
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+        driver.findElement(By.xpath("//button[contains(text(),\"Regístrate\")]")).click();
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+        By BtnEmail = By.xpath("//input[@id=\"email\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(BtnEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        btnRegistrarse.click();
+        By confirmarEmail = By.xpath("//input[@id=\"confirm\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(confirmarEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
 
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
+        By crearContraseña = By.xpath("//input[@placeholder=\"Crea una contraseña.\"]");
+        driver.findElement(crearContraseña).sendKeys("Abc123456.A");
 
-        driver.findElement(By.name("password")).sendKeys("Abc123123456A.");
 
-        driver.findElement(By.id("displayname")).sendKeys("");
+        By nombreUsuario = By.xpath("//input[@placeholder=\"Introduce un nombre de perfil.\"]");
+        driver.findElement(nombreUsuario).sendKeys("");
 
-        driver.findElement(By.id("day")).sendKeys("20");
 
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
+        driver.findElement(By.xpath("//input[@placeholder=\"DD\"]")).sendKeys("20");
+
+        Select cmbMes = new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
         cmbMes.selectByVisibleText("Agosto");
 
-        driver.findElement(By.id("year")).sendKeys("199");
+        driver.findElement(By.xpath("//input[@placeholder=\"AAAA\"]")).sendKeys("1999");
 
         WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
 
@@ -200,26 +186,29 @@ public class CasosDePrueba {
     @Test
     public void CP005_Registro_Fallido_Dia_del_Mes_Inválido() {
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+        driver.findElement(By.xpath("//button[contains(text(),\"Regístrate\")]")).click();
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+        By BtnEmail = By.xpath("//input[@id=\"email\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(BtnEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        btnRegistrarse.click();
+        By confirmarEmail = By.xpath("//input[@id=\"confirm\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(confirmarEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
 
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
+        By crearContraseña = By.xpath("//input[@placeholder=\"Crea una contraseña.\"]");
+        driver.findElement(crearContraseña).sendKeys("Abc123456.A");
 
-        driver.findElement(By.name("password")).sendKeys("Abc123123456A.");
 
-        driver.findElement(By.id("displayname")).sendKeys("HumbertoMarin9908201t8");
+        By nombreUsuario = By.xpath("//input[@placeholder=\"Introduce un nombre de perfil.\"]");
+        driver.findElement(nombreUsuario).sendKeys("HMarin990820");
 
-        driver.findElement(By.id("day")).sendKeys("");
 
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
+        driver.findElement(By.xpath("//input[@placeholder=\"DD\"]")).sendKeys("60");
+
+        Select cmbMes = new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
         cmbMes.selectByVisibleText("Agosto");
 
-        driver.findElement(By.id("year")).sendKeys("1999");
+        driver.findElement(By.xpath("//input[@placeholder=\"AAAA\"]")).sendKeys("1999");
 
         WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
 
@@ -238,31 +227,38 @@ public class CasosDePrueba {
                 driver.findElement(By.xpath("//div[contains(text(),\"Indica un día del mes válido.\")]")).getText());
     }
     @Test
-    public void CP006_Registro_Fallido_Mes_Inválido() {
+    public void CP006_Registro_Fallido_Sin_Seleccion_Sexo() {
 
-        By localizadorBtnRegistrarse = By.xpath("//button[contains(text(),\"Regístrate\")]");
+        driver.findElement(By.xpath("//button[contains(text(),\"Regístrate\")]")).click();
 
-        WebElement btnRegistrarse = driver.findElement(localizadorBtnRegistrarse);
+        By BtnEmail = By.xpath("//input[@id=\"email\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(BtnEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        btnRegistrarse.click();
+        By confirmarEmail = By.xpath("//input[@id=\"confirm\"]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(confirmarEmail)).sendKeys("humberto.marin@tsoftlatam.com");
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys("humberto.marin@tsoftlatam.com");
 
-        driver.findElement(By.id("confirm")).sendKeys("humberto.marin@tsoftlatam.com");
+        By crearContraseña = By.xpath("//input[@placeholder=\"Crea una contraseña.\"]");
+        driver.findElement(crearContraseña).sendKeys("Abc123456.A");
 
-        driver.findElement(By.name("password")).sendKeys("Abc123123456A.");
 
-        driver.findElement(By.id("displayname")).sendKeys("HumbertoMarin9908201t8");
+        By nombreUsuario = By.xpath("//input[@placeholder=\"Introduce un nombre de perfil.\"]");
+        driver.findElement(nombreUsuario).sendKeys("HMarin990820");
 
-        driver.findElement(By.id("day")).sendKeys("20");
 
-        Select cmbMes = new Select(driver.findElement(By.id("month")));
+        driver.findElement(By.xpath("//input[@placeholder=\"DD\"]")).sendKeys("20");
+
+        Select cmbMes = new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
         cmbMes.selectByVisibleText("Agosto");
 
-        driver.findElement(By.id("year")).sendKeys("1999");
+        driver.findElement(By.xpath("//input[@placeholder=\"AAAA\"]")).sendKeys("1999");
+
+        //WebElement optionMale = driver.findElement(By.xpath("//label[@for=\"gender_option_male\"]"));
 
         WebElement btnRegistro = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
         js.executeScript("arguments[0].scrollIntoView();", btnRegistro);
+
+        //optionMale.click();
 
         driver.findElement(By.xpath("//label[@for=\"marketing-opt-checkbox\"]")).click();
 
